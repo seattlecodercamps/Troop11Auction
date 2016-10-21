@@ -1,0 +1,18 @@
+﻿<h2>Bids</h2>
+
+<!--Item information-->
+<p>{{controller.item.name}} / {{controller.item.description}}</p>
+<ul>
+    <li ng-repeat="bid in controller.item.bids">
+        {{ bid.value }}
+    </li>
+</ul>
+
+<form ng-submit="controller.addBid()">
+    <div class="form-group">
+        <div class="form-control" >
+            <input ng-model="controller.newBid.value" type="number" min="{{controller.item.minimumBid}}"/>
+        </div>
+        <button>Submit</button>
+    </div>
+</form>

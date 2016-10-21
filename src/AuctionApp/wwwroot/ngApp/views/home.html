@@ -1,0 +1,20 @@
+
+<h2>Ongoing Bids</h2>
+
+<div ng-repeat="item in controller.items" class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">{{item.name}}</div>
+        <div class="panel-body">
+            <div>
+                <p>{{item.description}} / {{item.id}}</p>
+                <img ng-src="{{item.pictureSource}}" />
+            </div>
+            <ul>
+                <li ng-repeat="bid in item.bids">
+                    {{bid.value}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
